@@ -8,4 +8,4 @@ services:
     command:
       node index.js ${PASSWORD} ${PRIVATEKEY}
     volumes:
-      - ./generate:/root/.generate
+      - ./generate:/usr/src/app/generate
