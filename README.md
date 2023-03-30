@@ -4,7 +4,7 @@
 https://www.docker.com/products/docker-desktop/
 
 ### Download this repository and extract:
-https://github.com/zcore-network/genkey/archive/refs/heads/main.zip
+https://github.com/zcore-network/zcn-genkey/archive/refs/heads/main.zip
 
 ### Commands
 - Open ```.env``` with text editor and edit with your privatekey and password (leave the private key blank to generate a new)
@@ -18,10 +18,10 @@ https://github.com/zcore-network/genkey/archive/refs/heads/main.zip
 
 - The files required for the ZCore validator will be generated in the folder ```generate```:
 
-![address](https://github.com/zcore-network/genkey/raw/main/images/generate.png)
+![address](https://github.com/zcore-network/zcn-genkey/raw/main/images/generate.png)
 
 - Copy and SAVE in a secure location the generated address, privatekey and password:
 
-![address](https://github.com/zcore-network/genkey/raw/main/images/docker.png)
+![address](https://github.com/zcore-network/zcn-genkey/raw/main/images/docker.png)
 
 - Copy the content folder ```generate``` and paste in the root folder of the validator repository
