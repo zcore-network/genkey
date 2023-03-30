@@ -8,7 +8,21 @@ const path = require("path");
 var id = crypto.randomBytes(32).toString('hex');
 var privateKeyRandom = "0x"+id;
 
-// const privateKeyString = '0x61ce8b95ca5fd6f55cd97ac60817777bdf64f1670e903758ce53efc32c3dffeb'; // EXAMPLE
+
+
+function makeid(length) {
+    let result = '';
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    const charactersLength = characters.length;
+    let counter = 0;
+    while (counter < length) {
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+      counter += 1;
+    }
+    return result;
+}
+
+
 
 const args = process.argv;
 //console.log(args[2]);
@@ -26,8 +40,9 @@ if(privateKeyArg?.length == 66){
 if(passwordArg?.length >= 8){
 	password = passwordArg;
 }else{
-	password = '12345678';
+	password = makeid(24);
 }
+
 
 async function start(privateKeyString, password){
 
@@ -73,10 +88,12 @@ async function start(privateKeyString, password){
 
 	fs.writeFileSync(directory + '/' + keystoreFilename, JSON.stringify(keystore));
 	fs.writeFileSync(directory + '/pass.pwd', password);
+	fs.writeFileSync(maindirectory + '/.env', 'ACCOUNT='+address);	
 
 
 	console.log('#############################################################################################')
-	console.log('### Please save this private key and password in a secure location, as without it you will not be able to access or move the funds received during validation!!!!!!')
+	console.log('### SAVE this private key and password in a secure location');
+	console.log('### as without it you will not be able to access or move the funds!!!!!!')
 	console.log('#############################################################################################')
 	console.log('');
 	console.log('');
