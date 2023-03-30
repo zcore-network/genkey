@@ -4,14 +4,14 @@
 https://www.docker.com/products/docker-desktop/
 
 ### Download this repository and extract:
-https://github.com/mosqueiro/zcore-getkey/archive/refs/heads/main.zip
+https://github.com/zcore-network/genkey/archive/refs/heads/main.zip
 
 ### Commands
 - Open ```.env``` with text editor and edit with your privatekey and password (leave the private key blank to generate a new)
 
 - Delete the contents of the ```generate``` folder (don't delete the folder)
 
-- Run ```docker compose up``` command in the folder where you extracted this repository[^1]
+- Run ```docker compose up``` command in the folder where you extracted this repository [^1]
 
 [^1]: _If you don't want to use docker and you have nodejs installed, just type in the root of the directory: ```node index.js YOUR_PASSWORD YOUR_PRIVATEKEY```_
 
